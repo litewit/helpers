@@ -3,26 +3,23 @@ export const toSubstring = (str?: string, length = 0, endsWith = '') =>
 
 export const isPromise = (foo: any) => !!foo?.then && typeof foo.then === 'function';
 
-export const parseNum = (num: number | string | undefined | null) =>
-  parseInt(String(num), 10) || 0;
+export const parseNum = (num: number | string | undefined | null) => parseInt(String(num), 10) || 0;
 
-export const equalNum = (
-  num1: number | string | undefined | null,
-  num2: number | string | undefined | null,
-) => !!num1 && !!num2 && parseNum(num1) === parseNum(num2);
+export const equalNum = (num1: number | string | undefined | null, num2: number | string | undefined | null) =>
+  !!num1 && !!num2 && parseNum(num1) === parseNum(num2);
 
 export function reduceUniqueIds<T>(ids: T[], id?: T) {
-	if (id && !ids.includes(id)) {
-		ids.push(id);
-	}
-	return ids;
+  if (id && !ids.includes(id)) {
+    ids.push(id);
+  }
+  return ids;
 }
 
 export const sortById = (id1?: number, id2?: number, desc = false): number => {
-  if (!id1 ) {
+  if (!id1) {
     return 1;
   }
-  if (!id2 ) {
+  if (!id2) {
     return -1;
   }
   if (desc) {
@@ -33,10 +30,10 @@ export const sortById = (id1?: number, id2?: number, desc = false): number => {
 };
 
 export const sortByDate = (d1?: string, d2?: string, desc = false): number => {
-  if (!d1 ) {
+  if (!d1) {
     return 1;
   }
-  if (!d2 ) {
+  if (!d2) {
     return -1;
   }
   if (desc) {

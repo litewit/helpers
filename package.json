@@ -1,6 +1,6 @@
 {
   "name": "@litewit/helpers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,10 @@
     "type": "git",
     "url": "git+https://github.com/litewit/helpers.git"
   },
-  "keywords": ["Helper", "Utitlity"],
+  "keywords": [
+    "Helper",
+    "Utitlity"
+  ],
   "author": "litewit",
   "license": "ISC",
   "files": [
