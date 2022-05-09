@@ -26,9 +26,9 @@ export const sortById = (id1?: number, id2?: number, desc = false): number => {
     return -1;
   }
   if (desc) {
-    return id2 != id1 ? (id2 - id1 > 0 ? 1 : -1) : 0;
+    return id2 !== id1 ? (id2 - id1 > 0 ? 1 : -1) : 0;
   } else {
-    return id2 != id1 ? (id1 - id2 > 0 ? 1 : -1) : 0;
+    return id2 !== id1 ? (id1 - id2 > 0 ? 1 : -1) : 0;
   }
 };
 
@@ -40,8 +40,8 @@ export const sortByDate = (d1?: string, d2?: string, desc = false): number => {
     return -1;
   }
   if (desc) {
-    return d2 != d1 ? (new Date(d2).getTime() - new Date(d1).getTime() > 0 ? 1 : -1) : 0;
+    return d2 !== d1 ? (new Date(d2).getTime() - new Date(d1).getTime() > 0 ? 1 : -1) : 0;
   } else {
-    return d2 != d1 ? (new Date(d1).getTime() - new Date(d2).getTime() > 0 ? 1 : -1) : 0;
+    return d2 !== d1 ? (new Date(d1).getTime() - new Date(d2).getTime() > 0 ? 1 : -1) : 0;
   }
 };
